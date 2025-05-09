@@ -55,13 +55,20 @@
             meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
             document.getElementsByTagName('head')[0].appendChild(meta);
 
-            var mobilecanvas = document.querySelector("#unity-canvas");
-            mobilecanvas.style.width = "100%";
-            mobilecanvas.style.height = "100%";
-            mobilecanvas.style.position = "fixed";
+            //var mobilecanvas = document.querySelector("#unity-canvas");
+            //mobilecanvas.style.width = "100%";
+            //mobilecanvas.style.height = "100%";
+            //mobilecanvas.style.position = "fixed";
 
             document.body.style.textAlign = "left";
         }
+
+        const container = document.querySelector("#unity-container");
+        const mobileCanvas = document.querySelector("#unity-canvas");
+        const loadingCover = document.querySelector("#loading-cover");
+        const progressBarEmpty = document.querySelector("#unity-progress-bar-empty");
+        const progressBarFull = document.querySelector("#unity-progress-bar-full");
+        const spinner = document.querySelector('.spinner');
 
         const canFullscreen = (function () {
             for (const key of [
@@ -100,5 +107,5 @@
             }, 2000)
         });
     </script>
-</body>
+   </body>
 </html>
